@@ -1,0 +1,3350 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+    box-sizing: border-box;
+}
+
+
+body{
+    margin-top: 5px;
+    background-color: black ;}
+
+#header {
+    padding-right: 510px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/parallaxA\(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    margin-top: 2px;
+}
+
+.container{
+    padding: 10px 10%;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.icon{
+    height: auto;
+    width: 100px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{
+    color: #dbf220;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0%;  /* it will start at 0 width */
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom:  -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+#banner-text{
+    margin-top: 5%;
+    color: 	#6d1010;
+    font-size: 28px;
+}
+/*  USE ID IF YOU WOULD ONLY USE IT 1 TIME! */
+/* use class if you have to use it in multiple instances */
+#banner-text h1{
+    margin-top: 5%;
+    font-size: 55px;
+}
+#banner-text h1 span{
+    color: #dbf220;
+}
+#banner-text p span{
+    color: #dbf220;
+}
+/* BE MINDFUL OF TYPOS!! VERY COMMON ISSUE ..IT"S CASE SENSITIVE */
+/* TYPOS THEN VALUES<THEN LOGIC */
+/*  ________ABOUT_--____ */
+#about {
+  padding-top: 80px;
+  color:#dbf220;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1{
+
+    flex-basis: 35%;
+}
+
+.about-col1 img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-basis: 35%;
+    border-radius: 20px;
+
+}
+
+.about-col2 {
+    flex-basis: 60%;
+}
+.about-col2 h1 span{
+    color:#6d1010;
+}
+
+.about-col2 h1 span:hover{
+    color:#dbf220;
+}
+
+/* DONT JUST ASK CHATGP%! FIX YOUR CODE YOURSELF!ASK WHAT DOESNT WORK!! Debug your own code! */
+/* TYPOS.LOGIC. */
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #6d1010;
+}
+/* NAMING CLASSES..ADD hyphen"-" for convention */
+.tab-titles{
+    display: flex;
+    margin: 20px 40px ;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 650px;
+    cursor: pointer;
+    position: relative;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#6d1010;
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    transition: 0.5s;
+}
+/*  always read the code */
+.tab-links.active-link::after{
+     width:  60%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+}
+.tab-contents ul li span{
+    color: #6d1010;
+    font-size: 16px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+/* SERVICESSSS */
+#services{
+    padding: 30px;
+}
+
+.sub-title{
+    color: #dbf220;
+}
+.plan-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    
+
+}
+.plan-img{
+    width: 100%;
+    /*  to create a box */
+    height: auto;
+    border-radius: 10px;
+}
+
+.plan-list p{
+    font-size: 20px;
+    color: #000;
+}
+.plan-list div{
+    background:#6d1010;
+    padding: 30px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 14px;
+    transition: background 0.5s, transform 0.5s;
+}
+.plan-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.plan-list div a{
+    text-decoration: none;
+    color: #eed497;
+    font-size: 12px;
+    margin-top: 15px;
+    display: inline-block;
+}
+.plan-list p:hover{
+    color: #6d1010;
+}
+.plan-list div:hover{
+    
+    color: #6d1010;
+    background: #dbf220;
+    transform: translateY(-10px);
+}
+.plan-list div img:hover{
+    color: #6d1010;
+}
+/* PORTFOLIO */
+#allies{
+    padding: 20px;
+}
+.allies-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    
+}
+.allies{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.allies img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: tranform 0.5s;
+}
+.layer{
+    color: #dbf220;
+    font-size: 20px;
+    width: 100%;
+    height: 0%;
+    background:linear-gradient(rgba(0,0,0,.4),#6d1010);
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+
+}
+.layer h3{
+    font-weight: 500px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+.allies:hover img{
+    transform: scale(1.1);
+}
+.allies:hover .layer{
+    height: 100%;
+ 
+
+    /* ALWAYS ADD SPACES after PSEUDO CLASSES.!! */
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: #6d1010 1px solid;
+    border-radius:  10px; ;
+    padding: 14px;
+    color: #dbf220;
+    text-decoration: none;
+    transition: background 0.5s ;
+    transition: color 0.5s ;
+}
+
+.btn:hover{
+    border: #6d1010 3px;
+    background: #dbf220;
+    color: #6d1010;
+
+}
+.social-icons img{
+    margin-top: 30px;
+    height: auto;
+    width: 100px;
+    max-width: 10%;
+    size: 50px;
+    display: inline-block;
+    transition: transform 0.5s;
+    transition: background 0.5s;
+
+    /*  always add transition  */
+}
+
+.social-icons img:hover{
+    /*  to make it float for a bit */
+    transform: translateY(-5px);
+    /* background: linear-gradient(rgba(0,0,0,4),#dbf220); */
+}
+.contact-left{
+    flex-basis: 35%;
+}
+
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+
+.contact-left h1{
+    font-size: 50px;
+    color: #6d1010;
+}
+.contact-left p{
+    margin-top: 15px;
+    color: #6d1010;
+}
+
+.contact-left p span{
+    color: #dbf220;
+    font-size: 20px;
+}
+.contact-left h1 span{
+    color: #dbf220;
+}
+.btn.btn2{
+    display: inline-block;
+
+}
+
+.contact-right form {
+    color: #6d1010;
+}
+
+.highlight{
+    color: #dbf220;
+}
+
+.contact-left{
+    flex-basis: 35%;
+
+}
+
+
+.contact-right{
+    flex-basis: 50%;
+
+}
+
+#submit:hover{
+    background-color:#dbf220;
+    color: #000;
+    border-radius: 10px;
+}
+  
+
+#submit{
+    font-size: larger;
+    background: black;
+    padding: 14px 50px;
+    font-size:18px;
+    margin-top: 20px;
+  
+}
+
+
+.contact-right form{
+   width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #eed497;
+    padding: 15px;
+    margin: 15px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    color: #6d1010;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+/* RESPONSIVENESS */
+/* Small screens */
+
+nav .menuIcons{
+    display: none;
+}
+
+
+ion-icon {
+    color: #dbf220;
+   font-size: 32px; 
+   display: none;
+  }
+
+
+  #banner-text h1{
+    margin-top: 250px;
+    margin-left: 150px;
+    
+    right: 50px;
+    font-size: 45px;
+  
+}
+#banner-text p{
+    margin-top: 10px;
+    font-size: 70px;
+    margin-left: 150px;
+    right: 50px;
+    white-space: nowrap;
+  
+}
+
+
+.social{
+    font-size: 50px;
+    color: #dbf220;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1536px){
+    .container{
+        max-width: 1280px;
+    }
+}
+
+
+@media (max-width: 1280px){
+    .container{
+        max-width: 1024px;
+    }
+    #banner-text h1{
+        font-size: 30px;
+    }
+    
+    
+    #banner-text p{
+        font-size: 55px;
+    }
+    
+}
+
+
+@media (max-width: 1024px){
+    .container{
+        max-width: 738px;
+    }
+ 
+    #header {
+        background-image: url(img/parallaxFull.jpg);
+    }
+    
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .icon {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto; /* Center block element horizontally */
+    }
+
+    
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+    
+}
+nav ul li a{
+    color: #dbf220;
+    text-decoration: none;
+    font-size: 15px;
+    position:relative;
+}
+
+
+    
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    
+    .sub-title {
+        font-size: 40px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1, .about-col2 {
+        flex-basis: 100%;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1 {
+        margin-bottom: 30px;
+    }
+    
+    .about-col2 {
+        font-size: 20px;
+    }
+    
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    
+    #banner-text h1 {
+        margin-top: 100px;
+        margin-left: 10px;
+        right: 50px;
+        font-size: 30px;
+        white-space: nowrap;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    #banner-text p {
+        margin-top: 10px;
+        font-size: 50px;
+        margin-left: 15px;
+        right: 50px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    .allies-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .allies {
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    .allies img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    
+    .layer a {
+        color: #dbf220;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 50px;
+        line-height: 60px;
+        background: #6d1010;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    
+    .layer h3 {
+        margin: 0;
+    }
+    
+    .layer p {
+        margin: 10px 0;
+    }
+    
+    .layer a {
+        text-decoration: none;
+        color: #dbf220;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-right: 5px;
+    }
+    
+    .allies:hover img {
+        transform: scale(1.1);
+    }
+    
+    .allies:hover .layer {
+        height: 100%;
+    }
+    
+    .social-icons {
+        height: auto;
+        width: 150%;
+        margin-right: 50px;
+        box-sizing: border-box;
+    }
+    
+    .tab-contents ul li {
+        text-align: left;
+    }
+    
+    .contact-left {
+        white-space: nowrap;
+        text-align: center;
+        margin-left: 70px;
+    }
+    
+    .contact-left p {
+        margin-right: 110px;
+    }
+    
+    .contact-right {
+        margin-left: 70px;
+    }
+    .plan-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+        margin-left: 10px;
+    
+    }
+    .plan-img{
+        width: 100%;
+        /*  to create a box */
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    .plan-list p{
+        font-size: 20px;
+        color: #000;
+    }
+    .plan-list div{
+        background:#6d1010;
+        padding: 30px;
+        font-size: 15px;
+        font-weight: 300;
+        border-radius: 14px;
+        transition: background 0.5s, transform 0.5s;
+    }
+    .plan-list div h2{
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+    .plan-list div a{
+        text-decoration: none;
+        color: #eed497;
+        font-size: 12px;
+        margin-top: 15px;
+        display: inline-block;
+    }
+    .plan-list p:hover{
+        color: #6d1010;
+    }
+    .plan-list div:hover{
+        
+        color: #6d1010;
+        background: #dbf220;
+        transform: translateY(-10px);
+    }
+    .plan-list div img:hover{
+        color: #6d1010;
+}
+
+
+@media (max-width: 738px){
+    .container{
+        max-width: 640px;
+    }
+    .container{
+        max-width: 475px;
+    }
+    #header {
+        background-image: url(img/parallaxFull.jpg);
+    }
+    
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .icon {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto; /* Center block element horizontally */
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+    }
+    
+    nav .menuIcons {
+        display: block;
+    }
+    
+    nav ul {
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    
+    nav ul .iconX {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    .menuIcons {
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .sub-title {
+        font-size: 40px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1, .about-col2 {
+        flex-basis: 100%;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1 {
+        margin-bottom: 30px;
+    }
+    
+    .about-col2 {
+        font-size: 20px;
+    }
+    
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    
+    #banner-text h1 {
+        margin-top: 100px;
+        margin-left: 10px;
+        right: 50px;
+        font-size: 30px;
+        white-space: nowrap;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    #banner-text p {
+        margin-top: 10px;
+        font-size: 50px;
+        margin-left: 15px;
+        right: 50px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    .allies-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .allies {
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    .allies img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    
+    .layer a {
+        color: #dbf220;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 50px;
+        line-height: 60px;
+        background: #6d1010;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    
+    .layer h3 {
+        margin: 0;
+    }
+    
+    .layer p {
+        margin: 10px 0;
+    }
+    
+    .layer a {
+        text-decoration: none;
+        color: #dbf220;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-right: 5px;
+    }
+    
+    .allies:hover img {
+        transform: scale(1.1);
+    }
+    
+    .allies:hover .layer {
+        height: 100%;
+    }
+    
+    .social-icons {
+        height: auto;
+        width: 150%;
+        margin-right: 50px;
+        box-sizing: border-box;
+    }
+    
+    .tab-contents ul li {
+        text-align: left;
+    }
+    
+    .contact-left {
+        white-space: nowrap;
+        text-align: center;
+        margin-left: 70px;
+    }
+    
+    .contact-left p {
+        margin-right: 110px;
+    }
+    
+    .contact-right {
+        margin-left: 70px;
+    }
+    
+}
+
+
+@media (min-width:739px) and (max-width: 1024px){
+    .container{
+        max-width: 640px;
+    }
+    .container{
+        max-width: 475px;
+    }
+    #header {
+        background-image: url(img/parallaxFull.jpg);
+    }
+    
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .icon {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto; /* Center block element horizontally */
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+    }
+    
+    nav .menuIcons {
+        display: block;
+    }
+    
+    nav ul {
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    
+    nav ul .iconX {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    .menuIcons {
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .sub-title {
+        font-size: 40px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1, .about-col2 {
+        flex-basis: 100%;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1 {
+        margin-bottom: 30px;
+    }
+    
+    .about-col2 {
+        font-size: 20px;
+    }
+    
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    
+    #banner-text h1 {
+        margin-top: 100px;
+        margin-left: 10px;
+        right: 50px;
+        font-size: 30px;
+        white-space: nowrap;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    #banner-text p {
+        margin-top: 10px;
+        font-size: 50px;
+        margin-left: 15px;
+        right: 50px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    .allies-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .allies {
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    .allies img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    
+    .layer a {
+        color: #dbf220;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 50px;
+        line-height: 60px;
+        background: #6d1010;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    
+    .layer h3 {
+        margin: 0;
+    }
+    
+    .layer p {
+        margin: 10px 0;
+    }
+    
+    .layer a {
+        text-decoration: none;
+        color: #dbf220;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-right: 5px;
+    }
+    
+    .allies:hover img {
+        transform: scale(1.1);
+    }
+    
+    .allies:hover .layer {
+        height: 100%;
+    }
+    
+    .social-icons {
+        height: auto;
+        width: 150%;
+        margin-right: 50px;
+        box-sizing: border-box;
+    }
+    
+    .tab-contents ul li {
+        text-align: left;
+    }
+    
+    .contact-left {
+        white-space: nowrap;
+        text-align: center;
+        margin-left: 70px;
+    }
+    
+    .contact-left p {
+        margin-right: 110px;
+    }
+    
+    .contact-right {
+        margin-left: 70px;
+    }
+    
+}
+
+@media (max-width: 640px){
+    .container{
+        max-width: 475px;
+    }
+    #header {
+        background-image: url(img/parallaxFull.jpg);
+    }
+    
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .icon {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto; /* Center block element horizontally */
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+    }
+    
+    nav .menuIcons {
+        display: block;
+    }
+    
+    nav ul {
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    
+    nav ul .iconX {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    .menuIcons {
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .sub-title {
+        font-size: 40px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1, .about-col2 {
+        flex-basis: 100%;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .about-col1 {
+        margin-bottom: 30px;
+    }
+    
+    .about-col2 {
+        font-size: 20px;
+    }
+    
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    
+    #banner-text h1 {
+        margin-top: 100px;
+        margin-left: 10px;
+        right: 50px;
+        font-size: 30px;
+        white-space: nowrap;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    #banner-text p {
+        margin-top: 10px;
+        font-size: 50px;
+        margin-left: 15px;
+        right: 50px;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    .allies-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .allies {
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    .allies img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    
+    .layer a {
+        color: #dbf220;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 50px;
+        line-height: 60px;
+        background: #6d1010;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    
+    .layer h3 {
+        margin: 0;
+    }
+    
+    .layer p {
+        margin: 10px 0;
+    }
+    
+    .layer a {
+        text-decoration: none;
+        color: #dbf220;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-right: 5px;
+    }
+    
+    .allies:hover img {
+        transform: scale(1.1);
+    }
+    
+    .allies:hover .layer {
+        height: 100%;
+    }
+    
+    .social-icons {
+        height: auto;
+        width: 150%;
+        margin-right: 50px;
+        box-sizing: border-box;
+    }
+    
+    .tab-contents ul li {
+        text-align: left;
+    }
+    
+    .contact-left {
+        white-space: nowrap;
+        text-align: center;
+        margin-left: 70px;
+    }
+    
+    .contact-left p {
+        margin-right: 110px;
+    }
+    
+    .contact-right {
+        margin-left: 70px;
+    }
+    
+}
+
+
+
+
+
+
+
+@media (max-width: 600px){
+    .container{
+       width: 100%;
+       
+    }
+
+    
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 10px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-left: 10px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.contact-left p{
+    margin-right: 110px;
+}
+
+.contact-right{
+   margin-left: 70px;
+}
+}
+}
+
+
+@media only screen and (max-width: 428px){
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-left: 15px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.contact-left p{
+    margin-right: 150px;
+    font-size:  20px;
+}
+
+
+.contact-left h1{
+    margin-right: 210px;
+    font-size: 25px;
+}
+.contact-right{
+   margin-left: 120px;
+}
+
+
+}
+
+@media only screen and (max-width: 390px){
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-left: 15px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.contact-left p{
+    margin-right: 110px;
+}
+
+.contact-right{
+   margin-left: 70px;
+}
+}
+
+
+@media (max-width:300px){
+    .container{
+        max-width:100%;
+
+    }
+
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }.about-col2 {
+    font-size: 10px;
+    max-width: 300px; /* Set the maximum width */
+    word-wrap: break-word; /* Allow long words to wrap */
+}
+
+    
+    
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 15px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.contact-left p{
+    margin-right: 110px;
+}
+
+.contact-right{
+   margin-left: 70px;
+}
+}
+
+
+
+
+
+
+@media only screen and (max-width: 459px){
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-left: 15px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.contact-left p{
+    margin-right: 150px;
+    font-size:  20px;
+}
+
+
+.contact-left h1{
+    margin-right: 210px;
+    font-size: 25px;
+}
+.contact-right{
+   margin-left: 120px;
+}
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 470px){
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-left: 15px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.contact-left p{
+    margin-right: 150px;
+    font-size:  20px;
+}
+
+
+.contact-left h1{
+    margin-right: 210px;
+    font-size: 25px;
+}
+.contact-right{
+   margin-left: 120px;
+}
+
+
+}
+
+
+
+@media(max-width:690px){
+
+
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  
+}
+#banner-text p{
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 15px;
+    right: 50px;
+  
+}
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.allies {
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.contact-left p{
+    margin-right: 110px;
+}
+
+.contact-right{
+   margin-left: 70px;
+}
+
+
+
+
+
+
+
+@media (min-width:300px) and (max-width: 475px){
+    .container{
+        max-width: 300px;
+    }   
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 11px;
+    white-space: nowrap;
+  
+}
+#banner-text p{
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 15px;
+    right: 50px;
+  
+}
+.container {
+    text-align: center;
+}
+
+
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; }
+
+
+.allies {
+    width: 300px;
+    text-align: center;
+}
+
+.allies p{
+    font-size: 11px;
+}
+
+
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; 
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.contact-left p{
+    margin-right: 110px;
+    font-size: 20px;
+}
+
+.contact-left h1{
+    margin-right: 150px;
+    font-size: 30px;
+}
+.contact-right{
+   margin-left: 70px;
+}
+
+.plan-list div p{
+    font-size:  10px;
+}
+}
+
+@media(min-width:475px) and (max-width: 582px){
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 15px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-left: 15px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.contact-left p{
+    margin-right: 150px;
+    font-size:  20px;
+}
+
+
+.contact-left h1{
+    margin-right: 210px;
+    font-size: 25px;
+}
+.contact-right{
+   margin-left: 120px;
+}
+
+
+
+}
+
+
+
+
+@media (min-width: 691px) and (max-width: 826px){
+    #header{
+        background-image: url(img/parallaxFull.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+        
+    .icon{
+       display: block;
+        height: auto;
+       max-width: 100%;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+        
+    }
+    nav .menuIcons{
+        display: block;
+        
+
+    }
+    nav ul{
+        background: #6d1010;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav  ul li{
+        display:block ;
+        margin: 25px;
+    }
+    nav ul .iconX{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+
+    }
+    .menuIcons{
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0
+        ;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col1, .about-col2{
+
+        flex-basis: 100%;
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 20px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+  #banner-text h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    
+    right: 50px;
+    font-size: 25px;
+    white-space: nowrap;
+  
+    }
+    #banner-text p{
+        margin-top: 10px;
+        font-size: 40px;
+        margin-left: 15px;
+        right: 50px;
+    
+        }
+
+/* Center-align the container content */
+.container {
+    text-align: center;
+}
+
+/* Style the allies list */
+.allies-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center-align the allies horizontally */
+}
+
+/* Style each ally card */
+.allies {
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between allies */
+    text-align: center;
+}
+
+/* Style the ally images */
+.allies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+
+/* Style the layer with ally information */
+
+.layer a{
+    color: #dbf220;
+    margin-top: 20px ;
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 60px;
+    background: #6d1010;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+
+.layer h3 {
+    margin: 0;
+}
+
+.layer p {
+    margin: 10px 0;
+}
+
+
+.layer a {
+    text-decoration: none;
+    color: #dbf220;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+.allies:hover img {
+    transform: scale(1.1);
+}
+
+.allies:hover .layer {
+    height: 100%;
+   
+}
+.social-icons {
+    height: auto;
+    width: 150%;
+    margin-right: 50px;
+    box-sizing: border-box; /* Add this line */
+}
+
+
+.tab-contents ul li {
+    text-align: left;
+}
+
+
+.contact-left {
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.contact-left p{
+    margin-right: 150px;
+    font-size:  20px;
+}
+
+
+.contact-left h1{
+    margin-right: 210px;
+    font-size: 25px;
+}
+.contact-right{
+   margin-left: 120px;
+}
+
+
+}
+
